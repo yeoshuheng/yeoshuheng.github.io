@@ -22,46 +22,49 @@
   color: #6b7280;
 }
 
-/* normalize devicon */
+/* FORCE all icons into identical boxes */
+.icon-row i,
+.icon-row img {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Devicon-specific fix */
 .icon-row i {
   font-size: 20px;
   line-height: 1;
-  display: flex;
-  align-items: center;
 }
 
-/* normalize image icons */
+/* Image fix (THIS is the real fix for vLLM) */
 .icon-row img {
-  height: 20px;
-  width: 20px;
   object-fit: contain;
   filter: grayscale(100%) brightness(0.6);
-  display: block; /* key fix: removes baseline shift */
+  display: block;
 }
 
-/* tooltip container still works */
+/* tooltip */
 .tooltip {
   position: relative;
   display: flex;
   align-items: center;
 }
 
-/* tooltip text */
 .tooltip .tooltiptext {
   visibility: hidden;
-  background-color: #111827;
-  color: #fff;
-  text-align: center;
+  background: #111827;
+  color: white;
+  font-size: 12px;
   padding: 4px 8px;
   border-radius: 6px;
-  font-size: 12px;
   position: absolute;
   bottom: 125%;
   right: 0;
   opacity: 0;
-  transition: opacity 0.2s ease;
+  transition: 0.2s;
   white-space: nowrap;
-  z-index: 1;
 }
 
 .tooltip:hover .tooltiptext {
