@@ -12,6 +12,36 @@
     
   </head>
 
+
+  <style>
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  background-color: #111827;
+  color: #fff;
+  text-align: center;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 12px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  right: 0;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  white-space: nowrap;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+</style>
+
   <body>
     <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
       <tr style="padding:0px">
@@ -182,10 +212,27 @@
 
             <!-- Icons (right) -->
             <td style="text-align:right;color:#6b7280;">
-              <i class="devicon-python-plain" title="Python" style="font-size:20px;margin-left:6px;"></i>
-              <i class="devicon-rust-plain" title="Rust" style="font-size:20px;margin-left:6px;"></i>
-              <i class="devicon-pytorch-original" title="PyTorch" style="font-size:20px;margin-left:6px;"></i>
-              <i class="devicon-apache-plain" title="Apache" style="font-size:20px;margin-left:6px;"></i>
+  
+              <span class="tooltip">
+                <i class="devicon-python-plain" style="font-size:20px;margin-left:6px;"></i>
+                <span class="tooltiptext">Python</span>
+              </span>
+
+              <span class="tooltip">
+                <i class="devicon-rust-plain" style="font-size:20px;margin-left:6px;"></i>
+                <span class="tooltiptext">Rust</span>
+              </span>
+
+              <span class="tooltip">
+                <i class="devicon-pytorch-original" style="font-size:20px;margin-left:6px;"></i>
+                <span class="tooltiptext">PyTorch</span>
+              </span>
+
+              <span class="tooltip">
+                <i class="devicon-apache-plain" style="font-size:20px;margin-left:6px;"></i>
+                <span class="tooltiptext">Apache Thrift</span>
+              </span>
+
             </td>
           </tr>
         </table>
@@ -215,9 +262,22 @@
             </td>
 
             <td style="text-align:right;color:#6b7280;">
-              <i class="devicon-java-plain" title="Java" style="font-size:20px;margin-left:6px;"></i>
-              <i class="devicon-maven-plain" title="Maven" style="font-size:20px;margin-left:6px;"></i>
-              <i class="devicon-mysql-plain" title="SQL" style="font-size:20px;margin-left:6px;"></i>
+  
+              <span class="tooltip">
+                <i class="devicon-java-plain" style="font-size:20px;margin-left:6px;"></i>
+                <span class="tooltiptext">Java</span>
+              </span>
+
+              <span class="tooltip">
+                <i class="devicon-maven-plain" style="font-size:20px;margin-left:6px;"></i>
+                <span class="tooltiptext">Maven</span>
+              </span>
+
+              <span class="tooltip">
+                <i class="devicon-mysql-plain" style="font-size:20px;margin-left:6px;"></i>
+                <span class="tooltiptext">SQL</span>
+              </span>
+
             </td>
           </tr>
         </table>
